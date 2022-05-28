@@ -17,3 +17,7 @@ local user_conf, _ = pcall(require, "custom")
 if user_conf then
    require "custom"
 end
+
+vim.defer_fn(function()
+   nvchad.load_mappings()
+end, 1)
